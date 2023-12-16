@@ -1,0 +1,11 @@
+- name: Demo playbook de ansible curso do-201
+  hosts: 10.0.2.15
+  tasks:
+    - name: Instalacion de packete POSTFIX
+      yum:
+        name: postfix
+        state: latest
+    - name: Crea directorio /opt/do-201
+      file:
+        path: /opt/do-201
+        state: directory       
